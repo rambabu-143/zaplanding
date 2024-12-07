@@ -1,7 +1,7 @@
 'use client'
 import { Navbar } from '@/components/navbar'
 import { Hero } from '@/components/hero'
-import { EnhancedMultiStepJobChallenges } from '@/components/problem-statement'
+import { JobChallengesCards } from '@/components/problem-statement'
 import { SolutionOverview } from '@/components/solution-overview'
 import { ExclusiveOffer } from '@/components/exclusive-offer'
 import { Features } from '@/components/features'
@@ -23,7 +23,7 @@ export default function Home() {
 
       {/* Problem Statement Section */}
       <section id="problem-statement">
-        <EnhancedMultiStepJobChallenges />
+        <JobChallengesCards />
       </section>
 
       {/* Solution Overview Section */}
