@@ -36,7 +36,7 @@ export function Footer() {
                 <Instagram />
               </Link>
               <Link
-                href="#"
+                href="https://www.linkedin.com/in/xus-club/"
                 aria-label="LinkedIn"
                 target="_blank"
                 className="hover:text-gray-300 transition-colors duration-200"
