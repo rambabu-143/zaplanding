@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Dialog, DialogContent } from '@/components/ui/dialog'
+import { Dialog, DialogContent } from './ui/dialog'
 import { Play } from 'lucide-react'
 import { motion } from 'framer-motion'
 
