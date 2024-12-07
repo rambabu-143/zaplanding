@@ -7,7 +7,11 @@ import { ChevronDown } from 'lucide-react'
 const faqs = [
   {
     question: "What is included in the ₹28 offer?",
-    answer: "The ₹28 offer includes lifetime access to all current and future features of ZapMyJob, including AI-powered job application tracking, automated email sorting, and personalized insights. You'll also receive priority support and all future updates at no additional cost."
+    answer: "The ₹28 offer gives you access to ZapMyJob's premium features at just ₹28 per month for your lifetime, as long as the subscription remains active. This includes AI-powered job application tracking, automated email sorting, personalized insights, priority support, and future updates. Plus, exciting new features are planned to be added soon!"
+  },
+  {
+    question: "What happens if I cancel my subscription?",
+    answer: "If you cancel your ₹28/month subscription, you will lose access to the special pricing. If you decide to rejoin later, you’ll need to subscribe at the standard rate of ₹1499 per month. Be sure to stay subscribed to continue enjoying this exclusive offer."
   },
   {
     question: "How do I track my applications?",
@@ -18,8 +22,8 @@ const faqs = [
     answer: "Yes, we take data security very seriously. We use industry-standard encryption for all data transfers and storage. We do not share your personal information with any third parties. You have full control over your data and can delete it at any time."
   },
   {
-    question: "Can I cancel my subscription?",
-    answer: "For the ₹28 lifetime offer, there's no subscription to cancel - you get lifetime access. For regular subscriptions post-launch, you can cancel at any time, and your access will continue until the end of your billing period."
+    question: "Are there any future benefits to joining the ₹28 Club?",
+    answer: "Absolutely! By joining the ₹28 Club, you'll not only lock in this unbeatable rate but also gain access to future features, exclusive addons, and benefits as they are released. This offer is designed to reward early adopters with long-term value."
   }
 ]
 
@@ -77,4 +81,3 @@ export function FAQs() {
     </section>
   )
 }
-

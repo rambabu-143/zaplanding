@@ -13,7 +13,7 @@ import { Footer } from '@/components/footer'
 
 export default function Home() {
   return (
-    <main className="min-h-screen px-4 bg-white">
+    <main className="min-h-screen px-4 space-y-4 bg-white">
       <Navbar />
 
       {/* Hero Section */}

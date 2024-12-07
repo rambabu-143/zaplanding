@@ -1,5 +1,6 @@
 import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
 import { Button } from "./ui/button";
+import Link from "next/link";
 
 export function Footer() {
   return (
@@ -10,42 +11,38 @@ export function Footer() {
           {/* Contact Info */}
           <div>
             <h3 className="text-xl font-semibold mb-4">Contact Info</h3>
-            <p className="mb-2">Email: support@zapmyjob.com</p>
-            <p>Phone: +1 (555) 123-4567</p>
+            <p className="mb-2">Email: core@xusclub.com</p>
+            {/* <p>Phone: +1 (555) 123-4567</p> */}
           </div>
 
           {/* Follow Us */}
           <div>
             <h3 className="text-xl font-semibold mb-4">Follow Us</h3>
             <div className="flex justify-center space-x-6">
-              <a
-                href="#"
-                aria-label="Facebook"
-                className="hover:text-gray-300 transition-colors duration-200"
-              >
-                <Facebook />
-              </a>
-              <a
-                href="#"
+
+              <Link
+                href="https://x.com/onlypixelspace"
                 aria-label="Twitter"
                 className="hover:text-gray-300 transition-colors duration-200"
               >
                 <Twitter />
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                href="https://www.instagram.com/the28_club/profilecard/?igsh=MWd2azZrd3Bic3ppMA=="
                 aria-label="Instagram"
+                target="_blank"
                 className="hover:text-gray-300 transition-colors duration-200"
               >
                 <Instagram />
-              </a>
-              <a
+              </Link>
+              <Link
                 href="#"
                 aria-label="LinkedIn"
+                target="_blank"
                 className="hover:text-gray-300 transition-colors duration-200"
               >
                 <Linkedin />
-              </a>
+              </Link>
             </div>
           </div>
 

@@ -7,7 +7,7 @@ import RetroGrid from './ui/retro-grid'
 
 export function Hero() {
   return (
-    <section className="relative shadow-2xl rounded-2xl   flex flex-col items-center justify-center px-6 py-10  text-black">
+    <section className="relative shadow-2xl rounded-2xl mt-16   flex flex-col items-center justify-center p-6  text-black">
 
       <div className="relative z-10 pt-10 text-center max-w-4xl">
         {/* Badge */}
