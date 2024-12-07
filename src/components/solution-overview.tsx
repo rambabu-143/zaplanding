@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { Button } from './ui/button'
 import { VideoDialog } from './video-dialog'
-import { EmailAutomationResponsive } from './anim'
+import { AnimatedBeamMultipleOutputDemo } from './anim'
 
 export function SolutionOverview() {
   return (
@@ -32,7 +32,7 @@ export function SolutionOverview() {
           transition={{ duration: 0.5, delay: 0.4 }}
         >
           {/* <VideoDialog /> */}
-          <EmailAutomationResponsive />
+          <AnimatedBeamMultipleOutputDemo />
         </motion.div>
         {/* <motion.div
           initial={{ opacity: 0, y: 20 }}

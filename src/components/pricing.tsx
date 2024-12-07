@@ -44,7 +44,7 @@ export function Pricing() {
             </div>
             <div className="p-8">
               <Repeat className="w-12 h-12 text-gray-600 mb-4" />
-              <h3 className="text-2xl font-bold mb-2">₹888/month (Post-Launch)</h3>
+              <h3 className="text-2xl font-bold mb-2">₹1499/month (Post-Launch)</h3>
               <p className="text-gray-600 mb-4">Regular pricing after launch</p>
               <ul className="space-y-2 mb-6">
                 <li className="flex items-center">

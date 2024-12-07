@@ -3,6 +3,7 @@
 import { Button } from './ui/button'
 import { motion } from 'framer-motion'
 import { Brain } from 'lucide-react'
+import RetroGrid from './ui/retro-grid'
 
 export function Hero() {
   return (
@@ -94,6 +95,7 @@ export function Hero() {
           <p className="text-sm text-black">9,300/10,000 spots claimed</p>
         </motion.div>
       </div>
+      <RetroGrid/>
     </section>
   )
 }
