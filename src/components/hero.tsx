@@ -86,7 +86,7 @@ export function Hero() {
             </div>
           </div>
           <p className="text-sm md:text-base text-black">
-            Pre-book now to secure your spot. Prices rise to ₹888/month after
+            Pre-book now to secure your spot. Prices rise to ₹1499/month after
             launch.
           </p>
         </motion.div>
