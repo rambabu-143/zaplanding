@@ -1,4 +1,4 @@
-import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import { Twitter, Instagram, Linkedin } from "lucide-react";
 import { Button } from "./ui/button";
 import Link from "next/link";
 

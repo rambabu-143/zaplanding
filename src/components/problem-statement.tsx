@@ -6,24 +6,24 @@ import { AlertCircle, Clock, BarChart } from "lucide-react";
 const challenges = [
   {
     title: "Application Overload",
-    text: "Lost track of applications?",
+    text: "Are job applications slipping through the cracks?",
     icon: AlertCircle,
     description:
-      "Keeping track of numerous job applications can be overwhelming. It's easy to lose sight of where you've applied and the status of each application.",
+      "Tracking multiple job applications can feel like juggling too many balls. Stay organized and never lose sight of where you've applied.",
   },
   {
-    title: "Follow-up Failures",
-    text: "Missed follow-ups hurting your chances?",
+    title: "Missed Follow-Ups",
+    text: "Forgotten follow-ups costing interviews?",
     icon: Clock,
     description:
-      "Failing to follow up on applications can significantly reduce your chances of landing an interview. It's crucial to stay on top of your communication with potential employers.",
+      "Timely follow-ups are crucial to landing interviews. Let ZapMyJob ensure you're always on top of your next step.",
   },
   {
     title: "Time-Consuming Tracking",
-    text: "Manual tracking taking too much time?",
+    text: "Spending hours managing applications?",
     icon: BarChart,
     description:
-      "Manually tracking your job search progress can be incredibly time-consuming. This takes away valuable time that could be spent on tailoring applications or preparing for interviews.",
+      "Manual tracking eats into time better spent preparing applications or acing interviews. Automate your job search process with ease.",
   },
 ];
 
@@ -38,18 +38,16 @@ export function JobChallengesCards() {
           {challenges.map((challenge, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl shadow-md p-8 text-center flex flex-col items-center"
+              className="bg-white rounded-xl shadow-md p-8 text-center flex flex-col items-center transition-all hover:shadow-lg"
             >
               {/* Icon */}
-              <div className="bg-blue-100 p-4 rounded-full mb-4">
+              <div className="bg-gray-200 p-4 rounded-full mb-4">
                 {React.createElement(challenge.icon, {
-                  className: "w-12 h-12 text-blue-500",
+                  className: "w-12 h-12 text-black",
                 })}
               </div>
               {/* Title */}
-              <h3 className="text-xl font-semibold mb-2">
-                {challenge.title}
-              </h3>
+              <h3 className="text-xl font-semibold mb-2">{challenge.title}</h3>
               {/* Text */}
               <p className="text-gray-700 mb-4">{challenge.text}</p>
               {/* Description */}

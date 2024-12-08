@@ -4,7 +4,7 @@ import React, { useRef } from "react"
 import Image from "next/image"
 import { cn } from "@/lib/utils"
 import { AnimatedBeam } from "./ui/animated-beam"
-import { User, Zap, FileText, MessageCircle, Newspaper, Mail, FileImage } from 'lucide-react'
+import { User,  MessageCircle, Newspaper, Mail } from 'lucide-react'
 
 const Circle = React.forwardRef<
   HTMLDivElement,

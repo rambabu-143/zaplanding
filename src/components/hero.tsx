@@ -1,14 +1,39 @@
-'use client'
-
-import { Button } from './ui/button'
-import { motion } from 'framer-motion'
-import { Brain } from 'lucide-react'
-import RetroGrid from './ui/retro-grid'
+"use client";
+import { Button } from "./ui/button";
+import { motion } from "framer-motion";
+import { Brain } from "lucide-react";
+import RetroGrid from "./ui/retro-grid";
+import { Progress } from "./ui/progress";
+import { useProgress } from "./progress-content";
 
 export function Hero() {
-  return (
-    <section className="relative shadow-2xl rounded-2xl mt-16   flex flex-col items-center justify-center p-6  text-black">
+  // const [progress, setProgress] = useState(10); // Start at 10%
+  const { timeLeft, progress, spotsClaimed } = useProgress()
+  const formatTime = (time: number) => {
+    const hours = Math.floor(time / 3600)
+    const minutes = Math.floor((time % 3600) / 60)
+    const seconds = time % 60
+    return `${hours.toString().padStart(2, '0')}:${minutes
+      .toString()
+      .padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`
+  }
 
+  
+
+  const scrollToSection = (id: string) => {
+    const section = document.getElementById(id);
+    if (section) {
+      const navbarHeight = 80; // Adjust this value based on your navbar height
+      const sectionTop = section.offsetTop - navbarHeight;
+      window.scrollTo({
+        top: sectionTop,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  return (
+    <section className="relative shadow-2xl rounded-2xl mt-16 flex flex-col items-center justify-center p-6 text-black">
       <div className="relative z-10 pt-10 text-center max-w-4xl">
         {/* Badge */}
         <motion.div
@@ -51,11 +76,18 @@ export function Hero() {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="mt-6 space-y-3"
         >
-          <p className="text-base md:text-xl font-semibold">
-            Limited Offer: ₹28/month – Pre-launch Special
-          </p>
+          <div className="relative mt-6 flex items-center justify-center">
+
+            {/* Price Badge */}
+            <div className="relative z-10 flex items-center justify-center px-6 py-3 rounded-full shadow-lg">
+              <span className="text-lg md:text-2xl font-bold bg-gradient-to-r from-yellow-400 to-red-500 text-transparent bg-clip-text">
+                ₹28/month – Pre-launch Special
+              </span>
+            </div>
+          </div>
           <p className="text-sm md:text-base text-black">
-            Pre-book now to secure your spot. Prices rise to ₹888/month after launch.
+            Pre-book now to secure your spot. Prices rise to ₹888/month after
+            launch.
           </p>
         </motion.div>
 
@@ -73,6 +105,7 @@ export function Hero() {
           </Button>
           <Button
             variant="outline"
+            onClick={() => scrollToSection("exclusive-offer")}
             className="w-full sm:w-auto text-base md:text-lg px-6 py-3 md:px-8 md:py-4 hover:bg-white/20 transition-all duration-300"
           >
             Learn More
@@ -86,16 +119,15 @@ export function Hero() {
           transition={{ duration: 0.5, delay: 0.5 }}
           className="mt-6 max-w-md mx-auto space-y-3"
         >
-          <p className="text-sm text-black tracking-wide">
-            Offer valid for the first 10,000 users only.
+          <p className="text-sm text-black tracking-wide">Offer expires in:</p>
+          <p className="text-lg font-bold">{formatTime(timeLeft)}</p>
+          <Progress value={progress} className="h-4" />
+          <p className="text-sm text-black">
+            {spotsClaimed.toLocaleString()}/10,000 spots claimed
           </p>
-          <div className="bg-white/20 rounded-full h-4 w-full overflow-hidden shadow-inner">
-            <div className="bg-black h-full w-[93%]"></div>
-          </div>
-          <p className="text-sm text-black">9,300/10,000 spots claimed</p>
         </motion.div>
       </div>
-      <RetroGrid/>
+      <RetroGrid />
     </section>
-  )
+  );
 }

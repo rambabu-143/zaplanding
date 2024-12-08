@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion'
-import { Button } from './ui/button'
-import { VideoDialog } from './video-dialog'
+
 import { AnimatedBeamMultipleOutputDemo } from './anim'
 
 export function SolutionOverview() {
@@ -22,7 +21,7 @@ export function SolutionOverview() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            We take the hassle out of job tracking. From automated email sorting to intuitive dashboards, we've got you covered.
+            We take the hassle out of job tracking. From automated email sorting to intuitive dashboards, we&apos;ve got you covered.
           </motion.p>
         </div>
         <motion.div

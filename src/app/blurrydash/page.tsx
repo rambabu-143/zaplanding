@@ -28,7 +28,6 @@ import {
   TableCell,
   Table,
 } from '@/components/ui/table'
-import ProfilesDisplayPage from '@/components/profiles'
 
 const applicationData = [
   { month: 'Jan', applications: 4 },
@@ -61,7 +60,7 @@ const recentApplications = [
 ]
 
 export default function JobTracker() {
-  const [isComingSoon, setIsComingSoon] = useState(true)
+  const [isComingSoon] = useState(true)
 
   return (
     <div className="relative min-h-screen w-full bg-background dark:bg-black flex flex-col justify-center items-center">
@@ -187,13 +186,12 @@ export default function JobTracker() {
                       </TableCell>
                       <TableCell>
                         <span
-                          className={`inline-flex rounded-full px-2 py-1 text-xs font-medium ${
-                            application.status === 'Pending'
+                          className={`inline-flex rounded-full px-2 py-1 text-xs font-medium ${application.status === 'Pending'
                               ? 'bg-yellow-500/20 text-yellow-700 dark:bg-yellow-500/10 dark:text-yellow-400'
                               : application.status === 'Interview'
-                              ? 'bg-green-500/20 text-green-700 dark:bg-green-500/10 dark:text-green-400'
-                              : 'bg-red-500/20 text-red-700 dark:bg-red-500/10 dark:text-red-400'
-                          }`}
+                                ? 'bg-green-500/20 text-green-700 dark:bg-green-500/10 dark:text-green-400'
+                                : 'bg-red-500/20 text-red-700 dark:bg-red-500/10 dark:text-red-400'
+                            }`}
                         >
                           {application.status}
                         </span>
